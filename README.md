@@ -4,6 +4,8 @@ This is a fork of wofi-wifi-menu fro fourstepper at https://github.com/fourstepp
 
 A wifi menu primarily designed for use with Sway. Uses wofi and nmcli
 
+The main reason I did this is because wofi-wifi-menu is now unmaintained, and I was having issues with the script overwriting the known connections' passwords with "if connection is stored, hit enter". This obviously wasn't intended. I've fixed here and this is the new script.
+
 ### Dependencies
 
 * nmcli (networkmanager)
