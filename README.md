@@ -36,6 +36,9 @@ or by using the makepkg utility.
 #install package from AUR
 yay -S wifi4wofi
 
+#OR
+paru -S wifi4wofi
+
 #copy default config
 cp /usr/share/wofi/wifi.example ~/.config/wofi/wifi
 
