@@ -34,13 +34,13 @@ or by using the makepkg utility.
 
 ```bash
 #install package from AUR
-yay -S wofi-wifi-menu-git
+yay -S wifi4wofi
 
 #copy default config
 cp /usr/share/wofi/wifi.example ~/.config/wofi/wifi
 
 #run wofi-wifi-menu
-wofi-wifi-menu
+wifi4wofi
 ```
 
 ### Configuration
