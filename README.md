@@ -27,6 +27,22 @@ cd wifi4wofi
 bash "wifi4wofi.sh"
 ```
 
+#### Arch Linux
+
+There's also an AUR package available for Arch Linux. You can install it using [yay](https://github.com/Jguer/yay)
+or by using the makepkg utility.
+
+```bash
+#install package from AUR
+yay -S wofi-wifi-menu-git
+
+#copy default config
+cp /usr/share/wofi/wifi.example ~/.config/wofi/wifi
+
+#run wofi-wifi-menu
+wofi-wifi-menu
+```
+
 ### Configuration
 
 wifi4wofi has an example configuration file in the repository. It will run
