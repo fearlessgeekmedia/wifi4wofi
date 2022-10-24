@@ -24,7 +24,7 @@ directory of personal choice
 cd DESIRED_DIRECTORY
 git clone https://github.com/fearlessgeekmedia/wifi4wofi.git
 cd wifi4wofi
-bash "wifi4wofi.sh"
+bash wifi4wofi
 ```
 
 #### Arch Linux
