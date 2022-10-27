@@ -23,7 +23,9 @@ else
 	echo "WARNING: config file not found! Using default values."
 fi
 
+yad --title="wifi4wofi scan" --text="Scanning for networks" --no-buttons width=300 height=200 --undecorated --splash --fixed --center --skip-taskbar &
 LIST=$(nmcli --fields "$FIELDS" device wifi list | sed '/^--/d')
+killall yad -9 -r "wifi4wofi scan"
 # For some reason wofi always approximates character width 2 short... hmmm
 RWIDTH=$(($(echo "$LIST" | head -n 1 | awk '{print length($0); }')*10))
 # Dynamically change the height of the wofi menu

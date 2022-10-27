@@ -12,6 +12,7 @@ The main reason I did this is because wofi-wifi-menu is now unmaintained, and I 
 * iw
 * wofi
 * bash
+* yad
 
 ### Installation
 
