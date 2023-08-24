@@ -25,7 +25,8 @@ directory of personal choice
 cd DESIRED_DIRECTORY
 git clone https://github.com/fearlessgeekmedia/wifi4wofi.git
 cd wifi4wofi
-mkdir ~/.config/wofi && cp config.example ~/.config/wofi/wifi
+mkdir ~/.config/wofi
+cp config.example ~/.config/wofi/wifi
 bash wifi4wofi
 ```
 
