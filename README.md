@@ -25,10 +25,14 @@ directory of personal choice
 cd DESIRED_DIRECTORY
 git clone https://github.com/fearlessgeekmedia/wifi4wofi.git
 cd wifi4wofi
+mkdir ~/.config/wofi
+cp config.example ~/.config/wofi/wifi
 bash wifi4wofi
 ```
 
 #### Arch Linux
+
+##### Note, AUR package is broken. Do not use at this time. I'm leaving the instructions up for what you're supposed to do, but the AUR package is broken and I haven't gotten around to fixing it. I don't know when I will. 
 
 There's also an AUR package available for Arch Linux. You can install it using [yay](https://github.com/Jguer/yay)
 or by using the makepkg utility.
