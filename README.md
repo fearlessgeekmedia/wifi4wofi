@@ -30,27 +30,6 @@ cp config.example ~/.config/wofi/wifi
 bash wifi4wofi
 ```
 
-#### Arch Linux
-
-##### Note, AUR package is broken. Do not use at this time. I'm leaving the instructions up for what you're supposed to do, but the AUR package is broken and I haven't gotten around to fixing it. I don't know when I will. 
-
-There's also an AUR package available for Arch Linux. You can install it using [yay](https://github.com/Jguer/yay)
-or by using the makepkg utility.
-
-```bash
-#install package from AUR
-yay -S wifi4wofi
-
-#OR
-paru -S wifi4wofi
-
-#copy default config
-cp /usr/share/wofi/wifi.example ~/.config/wofi/wifi
-
-#run wofi-wifi-menu
-wifi4wofi
-```
-
 ### Configuration
 
 wifi4wofi has an example configuration file in the repository. It will run
