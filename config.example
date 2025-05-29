@@ -1,16 +1,21 @@
 # Config for wofi-wifi-menu
 
-# position values:
-# 1 2 3
-# 8 0 4
-# 7 6 5
-POSITION=3
+# Fields to display in the WiFi list
+# Available fields: SSID,SECURITY,BSSID,MODE,CHAN,FREQ,RATE,SIGNAL,BARS
+FIELDS=SSID,SECURITY
 
-#y-offset
-YOFF=17
+# Position of the menu (0-8):
+# 0 = center
+# 1 = top_left
+# 2 = top_right
+# 3 = top
+# 4 = right
+# 5 = bottom_right
+# 6 = bottom
+# 7 = bottom_left
+# 8 = left
+POSITION=0
 
-#x-offset
+# X and Y offset for the menu (in pixels)
 XOFF=0
-
-#fields to be displayed
-FIELDS=SSID,SECURITY,BARS
+YOFF=0

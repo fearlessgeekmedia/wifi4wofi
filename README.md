@@ -1,72 +1,67 @@
 # wifi4wofi
 
-This is a fork of wofi-wifi-menu fro fourstepper at https://github.com/fourstepper/wofi-wifi-menu, which is a fork of rofi-wifi-menu from zbaylin at https://github.com/zbaylin/rofi-wifi-menu.
+A WiFi menu for Wayland using wofi and NetworkManager, written in TypeScript and compiled with Bun.
 
-A wifi menu primarily designed for use with Sway. Uses wofi and nmcli
+## Prerequisites
 
-The main reason I did this is because wofi-wifi-menu is now unmaintained, and I was having issues with the script overwriting the known connections' passwords with "if connection is stored, hit enter". This obviously wasn't intended. I've fixed here and this is the new script.
+- [Bun](https://bun.sh/) - JavaScript runtime and package manager
+- [wofi](https://hg.sr.ht/~scoopta/wofi) - Wayland menu application
+- [NetworkManager](https://networkmanager.dev/) - Network connection manager
 
-### Dependencies
+## Installation
 
-* nmcli (networkmanager)
-* iw
-* wofi
-* bash
-* yad
-
-### Installation
-
-* make sure you have all the dependencies installed
-
-* run the following commands in your terminal. Replace initial directory with a
-directory of personal choice
-
-```
-cd DESIRED_DIRECTORY
-git clone https://github.com/fearlessgeekmedia/wifi4wofi.git
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/wifi4wofi.git
 cd wifi4wofi
-mkdir ~/.config/wofi
-cp config.example ~/.config/wofi/wifi
-bash wifi4wofi
 ```
 
-### Configuration
+2. Install dependencies:
+```bash
+bun install
+```
 
-wifi4wofi has an example configuration file in the repository. It will run
-without it, but will warn you if it does not exist.
+3. Build the application:
+```bash
+bun run build
+```
 
-To configure wifi4wofi, first cd into the directory it is installed into.
-Then edit the file `config.example`.
-It should contain the following variables:
+## Configuration
 
-* position
-* y-offset
-* x-offset
-* fields
+You can configure the application by creating a `config` file in the project directory or at `~/.config/wofi/wifi`. The following options are available:
 
-#### position
+```bash
+FIELDS=SSID,SECURITY  # Fields to display in the WiFi list
+POSITION=0           # Menu position
+YOFF=0              # Y offset
+XOFF=0              # X offset
+```
 
-position can be configured where the number represents the position on this
-screen in this way
+## Usage
 
-| *Screen*   | Left | Right | Center |
-|------------|------|-------|--------|
-| **Top**    | 1    | 2     | 3      |
-| **Center** | 8    | 0     | 4      |
-| **Bottom** | 7    | 6     | 5      |
+Run the application:
+```bash
+bun run start
+```
 
-#### y-offset
+The application will:
+1. Show a scanning dialog
+2. Display a list of available WiFi networks
+3. Allow you to:
+   - Connect to a network
+   - Toggle WiFi on/off
+   - Manually enter network details
+   - Enter passwords for secured networks
 
-y-offset is measured in pixels. A positive value moves the window downward,
-while a negative value moves it upward.
+## Building
 
-#### x-offset
+To build the application for distribution:
+```bash
+bun run build
+```
 
-x-offset is measured in pixels. A positive value move the window rightward, while
-a negative value moves it leftward.
+The compiled output will be in the `dist` directory.
 
-#### fields
+## License
 
-fields choose what is displayed by the menu. The available fields are as follows:
-
-`NAME,SSID,SSID-HEX,BSSID,MODE,CHAN,FREQ,RATE,SIGNAL,BARS,SECURITY,WPA-FLAGS,RSN-FLAGS,DEVICE,ACTIVE,IN-USE,DBUS-PATH`
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
