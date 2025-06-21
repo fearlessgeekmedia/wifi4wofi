@@ -1,0 +1,60 @@
+# Bun / Node.js
+/node_modules
+/bun.lockb
+/package-lock.json
+/yarn.lock # if you ever use yarn
+/npm-debug.log*
+/yarn-debug.log*
+/yarn-error.log*
+/.pnp/
+.pnp.js
+
+# Production / Build artifacts
+/dist
+/build
+/out
+/release
+/tmp
+
+# Compiled TypeScript files (if you compile to JS)
+# If your project runs TS directly via `bun run`, you might not have these,
+# but it's good to include if a build step creates them.
+# Consider where your compiled JS output goes.
+*.js.map
+*.d.ts.map
+*.tsbuildinfo
+# JavaScript files compiled from TypeScript (if not handled by dist/build)
+# Be careful if you mix JS and TS in the same directory.
+# If your TS compiles to `dist`, then these aren't needed here.
+# *.js
+# *.d.ts
+
+# Runtime files
+*.log
+/npm-debug.log*
+/y.log
+
+# Dependency directories
+/vendor/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDEs and Editors
+.idea/ # JetBrains IDEs (IntelliJ, WebStorm, etc.)
+.vscode/ # VS Code
+*.iml
+*.iws
+*.ipr
+.project
+.classpath
+.c9/ # Cloud9 IDE
+
+# macOS
+.DS_Store
+.Apple

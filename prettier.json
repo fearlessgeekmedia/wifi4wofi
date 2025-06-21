@@ -1,0 +1,6 @@
+{
+  "tabWidth": 4,
+  "useTabs": false, // This is the crucial setting for spaces
+  "semi": true,
+  "singleQuote": false
+}

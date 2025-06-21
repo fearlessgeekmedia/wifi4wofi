@@ -62,6 +62,13 @@ bun run build
 
 The compiled output will be in the `dist` directory.
 
+### by mohyddin
+to build a binary 
+
+```bash
+bun build --compile src/index.ts --outfile wifi4wofi
+```
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

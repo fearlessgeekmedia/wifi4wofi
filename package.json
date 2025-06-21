@@ -4,16 +4,15 @@
   "description": "A WiFi menu for Wayland using wofi and NetworkManager",
   "type": "module",
   "scripts": {
-    "start": "bun run src/index.ts",
-    "build": "bun build src/index.ts --outdir dist",
+    "start": "bun src/index.js",
+    "build": "bun build src/index.ts --outdir dist --target=bun",
     "dev": "bun --watch src/index.ts"
-  },
-  "dependencies": {
-    "node-networkmanager": "^1.0.0",
-    "node-wofi": "^1.0.0"
   },
   "devDependencies": {
     "bun-types": "latest",
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "node-network-manager": "^1.0.14"
   }
 }
