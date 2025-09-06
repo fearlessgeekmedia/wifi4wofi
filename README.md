@@ -19,10 +19,10 @@ This project includes a Nix flake for easy installation and development.
 #### Quick Start
 ```bash
 # Run directly without installation
-nix run github:yourusername/wifi4wofi
+nix run github:fearlessgeekmedia/wifi4wofi
 
 # Or clone and run locally
-git clone https://github.com/yourusername/wifi4wofi.git
+git clone https://github.com/fearlessgeekmedia/wifi4wofi.git
 cd wifi4wofi
 nix run
 ```
@@ -44,7 +44,7 @@ Add to your `configuration.nix`:
 ```nix
 {
   imports = [
-    (builtins.getFlake "github:yourusername/wifi4wofi").nixosModules.default
+    (builtins.getFlake "github:fearlessgeekmedia/wifi4wofi").nixosModules.default
   ];
   
   services.wifi4wofi.enable = true;
@@ -55,7 +55,7 @@ Add to your `configuration.nix`:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/wifi4wofi.git
+git clone https://github.com/fearlessgeekmedia/wifi4wofi.git
 cd wifi4wofi
 ```
 
