@@ -22,6 +22,7 @@
           src = ./.;
           
           nativeBuildInputs = [ bun ];
+          buildInputs = with pkgs; [ yad ];
           
           buildPhase = ''
             # Build the application directly with bun
@@ -60,6 +61,7 @@
             wofi
             networkmanager
             jq
+            yad
             # For Sway users
             sway
             # For other Wayland compositors
