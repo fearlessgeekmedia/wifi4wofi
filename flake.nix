@@ -24,11 +24,8 @@
           nativeBuildInputs = [ bun ];
           
           buildPhase = ''
-            # Install dependencies
-            ${bun}/bin/bun install --frozen-lockfile
-            
-            # Build the application
-            ${bun}/bin/bun run build
+            # Build the application directly with bun
+            ${bun}/bin/bun build src/index.ts --outdir dist --target bun
           '';
           
           installPhase = ''
@@ -75,11 +72,12 @@
           shellHook = ''
             echo "Welcome to wifi4wofi development environment!"
             echo "Available commands:"
-            echo "  bun run start    - Start the application"
-            echo "  bun run build    - Build the application"
-            echo "  bun run dev      - Start in development mode"
+            echo "  bun run src/index.ts  - Start the application directly"
+            echo "  bun build src/index.ts --outdir dist  - Build the application"
+            echo "  bun --watch src/index.ts  - Start in development mode"
             echo ""
             echo "Make sure you have NetworkManager and wofi installed on your system."
+            echo "Note: This app only uses Node.js built-in modules, no external dependencies needed!"
           '';
         };
         
